@@ -1,0 +1,28 @@
+.wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 6px;
+    min-width: 80px;
+}
+.day {
+    color: var(--primary-color);
+    font-size: 5rem;
+    line-height: 52px;
+    &.large {
+        font-size: 7rem;
+        line-height: 74px;
+    }
+}
+.line {
+    width: 100%;
+    border-top: 1px solid #e3e3e3;
+}
+.month-year {
+    font-size: 1.3rem;
+    margin-top: 6px;
+    color: #e5a539;
+    font-weight: 500;
+}
