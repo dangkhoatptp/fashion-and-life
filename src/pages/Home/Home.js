@@ -1,11 +1,11 @@
 import styles from "./Home.module.scss";
 import classNames from "classnames/bind";
 
-import { Date, Block } from "../../components";
+import { NewsBlock } from "../../components";
 import images from "../../assets/images";
 
 const cx = classNames.bind(styles);
-const newsListHorizontal = [
+const newsList01 = [
   {
     img: images.img02,
     title: "Giá chung cư mới TP.HCM ngược chiều Hà Nội",
@@ -24,16 +24,14 @@ const newsListHorizontal = [
     type: "Doanh Nghiệp",
   },
 ];
-const newsListVertical = [
+const newsList02 = [
   {
     img: images.img05,
     title: "Khám phá Măng Đen - Lá phổi xanh của núi rừng Tây Nguyên",
     subTitle:
       "DLDN - Măng Đen - lá phổi xanh của Tây Nguyên là địa điểm mà du khách yêu thích thiên nhiên không thể bỏ qua trong mùa hè này.",
     type: "Du lịch",
-    day: 11,
-    month: 4,
-    year: 2024,
+    date: "11/04/2024",
   },
   {
     img: images.img06,
@@ -41,9 +39,7 @@ const newsListVertical = [
     subTitle:
       "DLDN - Cùng với kết quả kinh doanh thụt lùi của doanh nghiệp, thu nhập của Shark Hồng Anh cũng ghi nhận giảm mạnh trong năm vừa qua.",
     type: "Kinh doanh",
-    day: 11,
-    month: 4,
-    year: 2024,
+    date: "11/04/2024",
   },
   {
     img: images.img07,
@@ -52,9 +48,7 @@ const newsListVertical = [
     subTitle:
       'DLDN - Lý Nhã Kỳ cho biết cô đang có trên dưới 400 chiếc túi đủ kiểu đến từ những thương hiệu lớn trên thế giới, trị giá khoảng 50 tỷ đồng, thế mới biết kho hàng hiệu của người đẹp "khủng" thế nào.',
     type: "Thời trang",
-    day: 10,
-    month: 4,
-    year: 2024,
+    date: "10/04/2024",
   },
   {
     img: images.img07,
@@ -63,9 +57,7 @@ const newsListVertical = [
     subTitle:
       'DLDN - Lý Nhã Kỳ cho biết cô đang có trên dưới 400 chiếc túi đủ kiểu đến từ những thương hiệu lớn trên thế giới, trị giá khoảng 50 tỷ đồng, thế mới biết kho hàng hiệu của người đẹp "khủng" thế nào.',
     type: "Kinh doanh",
-    day: 10,
-    month: 4,
-    year: 2024,
+    date: "10/04/2024",
   },
   {
     img: images.img08,
@@ -74,12 +66,10 @@ const newsListVertical = [
     subTitle:
       "DLDN - Dù chỉ giữ vị trí Phó tổng giám đốc của Ninh Vân Bay, hoa hậu Đặng Thị Ngọc Hân lại là người có thu nhập cao nhất trong ban lãnh đạo của doanh nghiệp này.",
     type: "Du lịch",
-    day: 11,
-    month: 4,
-    year: 2024,
+    date: "11/04/2024",
   },
 ];
-const newsNewestVertical = [
+const newsList03 = [
   {
     img: images.img09,
     title:
@@ -105,7 +95,7 @@ const newsNewestVertical = [
     type: "Thể thao",
   },
 ];
-const newsTourismListVertical = [
+const newsList04 = [
   {
     img: images.img05,
     title: "Khám phá Măng Đen - Lá phổi xanh của núi rừng Tây Nguyên",
@@ -132,7 +122,7 @@ const newsTourismListVertical = [
     date: "23/03/2024",
   },
 ];
-const newsCultureEntertainmentListOther = [
+const newsList05 = [
   {
     img: images.img17,
     title:
@@ -152,7 +142,7 @@ const newsCultureEntertainmentListOther = [
     date: "19/03/2024",
   },
 ];
-const hotNewsList = [
+const newsList06 = [
   {
     title:
       "Hoa hậu Trịnh Thanh Hồng đẹp lộng lẫy sau khi đăng quang Hoa hậu Thế Giới Người Việt",
@@ -176,7 +166,7 @@ const hotNewsList = [
     type: "Thư ngỏ",
   },
 ];
-const newsBusinessList = [
+const newsList07 = [
   {
     img: images.img03,
     title:
@@ -209,103 +199,62 @@ const newsBusinessList = [
       "DLDN - Cùng với kết quả kinh doanh thụt lùi của doanh nghiệp, thu nhập của Shark Hồng Anh cũng ghi nhận giảm mạnh trong năm vừa qua.",
   },
 ];
-const newsRealEstate_FashionList = [
+const newsList08 = [
   {
-    title: "BẤT ĐỘNG SẢN",
-    mainNews: {
-      img: images.img02,
-      title: "Giá chung cư mới TP HCM ngược chiều Hà Nội",
-      date: "17/04/2024",
-      subTitle:
-        "DLDN - Tới hết quý I, giá căn hộ mới ở TP HCM giảm 3%, bình quân 61 triệu đồng mỗi m2, trái ngược với đà tăng 19% của chung cư Hà Nội.",
-    },
-    newsOther: [
-      {
-        img: images.img10,
-        title:
-          "Sun Ponte Residence – tổ hợp BĐS đẳng cấp ven sông Hàn chính thức lộ diện",
-        date: "11/04/2024",
-      },
-      {
-        img: images.img20,
-        title:
-          "Không phải chung cư, đây mới là loại hình BĐS tăng giá nhiều nhất khiến người mua choáng váng",
-        date: "08/04/2024",
-      },
-      {
-        img: images.img21,
-        title:
-          "Giá nhà ở xã hội tăng như “lên đồng”, có nơi gấp 4 lần dù đã sử dụng hơn chục năm",
-        date: "04/04/2024",
-      },
-      {
-        img: images.img22,
-        title:
-          "New Orchard: “Miền đất hứa” cho đầu tư bất động sản tại Sông Công - Phổ Yên",
-        date: "03/04/2024",
-      },
-    ],
-  },
-  {
-    title: "THỜI TRANG",
-    mainNews: {
-      img: images.img09,
-      title:
-        "Trước khi lấy chồng doanh nhân, Midu là “đại gia bất động sản” chăm mặc gợi cảm",
-      date: "17/04/2024",
-      subTitle: "DLDN - Thông tin nữ diễn viên sắp lên xe hoa gây chú ý.",
-    },
-    newsOther: [
-      {
-        img: images.img07,
-        title:
-          "Tuyên bố có hơn 400 tỷ, 5 két sắt kim cương, vậy kho hàng hiệu của Lý Nhã Kỳ thế nào?",
-        date: "10/04/2024",
-      },
-      {
-        img: images.img07,
-        title:
-          "Tuyên bố có hơn 400 tỷ, 5 két sắt kim cương, vậy kho hàng hiệu của Lý Nhã Kỳ thế nào?",
-        date: "11/04/2024",
-      },
-      {
-        img: images.img23,
-        title: "Tân Hoa hậu Hoà bình Thái Lan đẹp như búp bê sống",
-        date: "08/04/2024",
-      },
-      {
-        img: images.img24,
-        title:
-          "Vợ sắp cưới của TiTi (HKT) xinh đẹp, có gu thời trang táo bạo hút mắt",
-        date: "06/04/2024",
-      },
-    ],
-  },
-];
-const newsBeautifyMainColumn = [
-  {
-    img: images.img25,
-    title: "Cách làm gà lắc giòn rụm dễ đến không ngờ",
-    date: "21/03/2024",
-    subTitle:
-      "DLDN - Ức gà bị nhiều người chê vì khó chế biến, dễ bị khô. Nhưng đây là phần thịt rất bổ dưỡng và nếu biết cách sẽ làm được rất nhiều món ngon hấp dẫn.",
-  },
-  {
-    img: images.img26,
+    img: images.img10,
     title:
-      "Thêm một cách chế biến tôm tuyệt ngon, cực kỳ hao cơm, người vụng mấy cũng làm được",
-    date: "15/03/2024",
-    subTitle:
-      "DLDN - Tôm siêu nhiều canxi, cực tốt cho sức khỏe. Chế biến theo cách này đã bổ lại càng thơm ngon, tốn cơm.",
+      "Sun Ponte Residence – tổ hợp BĐS đẳng cấp ven sông Hàn chính thức lộ diện",
+    date: "11/04/2024",
+  },
+  {
+    img: images.img20,
+    title:
+      "Không phải chung cư, đây mới là loại hình BĐS tăng giá nhiều nhất khiến người mua choáng váng",
+    date: "08/04/2024",
+  },
+  {
+    img: images.img21,
+    title:
+      "Giá nhà ở xã hội tăng như “lên đồng”, có nơi gấp 4 lần dù đã sử dụng hơn chục năm",
+    date: "04/04/2024",
+  },
+  {
+    img: images.img22,
+    title:
+      "New Orchard: “Miền đất hứa” cho đầu tư bất động sản tại Sông Công - Phổ Yên",
+    date: "03/04/2024",
   },
 ];
-const newsBeautifySubColumn = [
+const newsList09 = [
+  {
+    img: images.img07,
+    title:
+      "Tuyên bố có hơn 400 tỷ, 5 két sắt kim cương, vậy kho hàng hiệu của Lý Nhã Kỳ thế nào?",
+    date: "10/04/2024",
+  },
+  {
+    img: images.img07,
+    title:
+      "Tuyên bố có hơn 400 tỷ, 5 két sắt kim cương, vậy kho hàng hiệu của Lý Nhã Kỳ thế nào?",
+    date: "11/04/2024",
+  },
+  {
+    img: images.img23,
+    title: "Tân Hoa hậu Hoà bình Thái Lan đẹp như búp bê sống",
+    date: "08/04/2024",
+  },
+  {
+    img: images.img24,
+    title:
+      "Vợ sắp cưới của TiTi (HKT) xinh đẹp, có gu thời trang táo bạo hút mắt",
+    date: "06/04/2024",
+  },
+];
+const newsList10 = [
   {
     img: images.img27,
-    title: "Cách làm gà lắc giòn rụm dễ đến không ngờ",
-    date: "21/03/2024",
-    subTitle:
-      "DLDN - Ức gà bị nhiều người chê vì khó chế biến, dễ bị khô. Nhưng đây là phần thịt rất bổ dưỡng và nếu biết cách sẽ làm được rất nhiều món ngon hấp dẫn.",
+    title: "Khi ăn nấm, nhớ cho kỹ những lưu ý này kẻo ngộ độc chết người",
+    date: "06/03/2024",
   },
   {
     img: images.img28,
@@ -317,483 +266,425 @@ const newsBeautifySubColumn = [
 function Home() {
   return (
     <div className={cx("wrapper")}>
-      <Block>
-        <div className={cx("main-column")}>
-          <div className={cx("main-column__main-news-container")}>
-            <div className={cx("main-news-container__img")}>
-              <img src={images.img01} alt="" />
-            </div>
-            <div className={cx("main-news-container__content")}>
-              <div className={cx("content__date")}>
-                <Date large day={17} month={4} year={2024} />
-              </div>
-              <div className={cx("content__text")}>
-                <h2 className={cx("text__title")}>
-                  Đến ngoại ô TP.HCM chiêm ngưỡng cánh đồng cỏ tranh đẹp như mơ
-                </h2>
-                <p className={cx("text__sub-title")}>
-                  DLDN - Cánh đồng cỏ tranh trắng muốt mang vẻ đẹp thơ mộng,
-                  hoang sơ tại làng đại học Thủ Đức trở thành điểm check-in lí
-                  tưởng của nhiều bạn trẻ dịp cuối tuần.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className={cx("main-column__main-news-list-horizontal")}>
-            {newsListHorizontal.map((item, index) => {
+      {/* Container point */}
+      <div className={cx("container")}>
+        <div className={cx("flex-column-9", "margin-right-30")}>
+          <NewsBlock
+            data={{
+              img: images.img01,
+              title:
+                "Đến ngoại ô TP.HCM chiêm ngưỡng cánh đồng cỏ tranh đẹp như mơ",
+              date: "17/04/2024",
+              subTitle:
+                "DLDN - Cánh đồng cỏ tranh trắng muốt mang vẻ đẹp thơ mộng, hoang sơ tại làng đại học Thủ Đức trở thành điểm check-in lí tưởng của nhiều bạn trẻ dịp cuối tuần.",
+            }}
+            verticalBlock
+            widthPicture="100%"
+            heightPicture="470px"
+            dateInContent
+            styleTitle="2.5rem 600"
+          />
+          <ul className={cx("horizontal-list", "margin-top-30")}>
+            {newsList01.map((item, index) => {
               return (
-                <div
-                  key={index}
-                  className={cx("main-news-list-horizontal__main-news-item")}
-                >
-                  <div className={cx("main-news-item__img")}>
-                    <img src={item.img} alt="" />
-                  </div>
-                  <h2 className={cx("main-news-item__title")}>{item.title}</h2>
-                  <span className={cx("main-news-item__type")}>
-                    {item.type}
-                  </span>
-                </div>
+                <li key={index} className={cx("item-list-01")}>
+                  <NewsBlock
+                    data={item}
+                    verticalBlock
+                    widthPicture="100%"
+                    heightPicture="166px"
+                    styleTitle="1.6rem 600 3"
+                  />
+                </li>
               );
             })}
-          </div>
-          <div className={cx("main-column__main-news-list-vertical")}>
-            {newsListVertical.map((item, index) => {
+          </ul>
+          <ul className={cx("vertical-list", "margin-top-30")}>
+            {newsList02.map((item, index) => {
               return (
-                <div
-                  key={index}
-                  className={cx(
-                    "main-news-list-vertical__main-news-item-vertical"
-                  )}
-                >
-                  <div className={cx("main-news-item-vertical__img")}>
-                    <img src={item.img} alt="" />
-                    <div className={cx("main-news-item-vertical__date")}>
-                      <Date
-                        day={item.day}
-                        month={item.month}
-                        year={item.year}
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className={cx(
-                      "main-news-item-vertical__content-news-item-vertical"
-                    )}
-                  >
-                    <h2 className={cx("content-news-item-vertical__title")}>
-                      {item.title}
-                    </h2>
-                    <span className={cx("content-news-item-vertical__type")}>
-                      {item.type}
-                    </span>
-                    <p className={cx("content-news-item-vertical__sub-title")}>
-                      {item.subTitle}
-                    </p>
-                  </div>
-                </div>
+                <li key={index} className={cx("item-list-02")}>
+                  <NewsBlock
+                    data={item}
+                    horizontalBlock
+                    widthPicture="276px"
+                    heightPicture="181px"
+                    dateInPicture
+                    styleTitle="2rem 600"
+                    styleTypeNews="color box"
+                  />
+                </li>
               );
             })}
-          </div>
+          </ul>
         </div>
-        <div className={cx("sub-column")}>
-          <div className={cx("sub-column__sub-news-newest-list-vertical")}>
-            <div className={cx("sub-news-newest-list-vertical__title")}>
-              BÀI VIẾT MỚI NHẤT
-            </div>
-            {newsNewestVertical.map((item, index) => {
-              return (
-                <div
-                  key={index}
-                  className={cx(
-                    "sub-news-newest-list-vertical__sub-news-newest-item-vertical"
-                  )}
-                >
-                  <div className={cx("sub-news-newest-item-vertical__img")}>
-                    <img src={item.img} alt="" />
-                  </div>
-                  <div
-                    className={cx(
-                      "sub-news-newest-item-vertical__content-sub-news-newest-item-vertical"
-                    )}
-                  >
-                    <h2
-                      className={cx(
-                        "content-sub-news-newest-item-vertical__title"
-                      )}
-                    >
-                      {item.title}
-                    </h2>
-                    <span
-                      className={cx(
-                        "content-sub-news-newest-item-vertical__type"
-                      )}
-                    >
-                      {item.type}
-                    </span>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </Block>
-      <Block styleBlock={{ backgroundColor: "#f5f5f5" }}>
-        <div style={{ flex: 5 }} className={cx("main-column")}>
-          <div className={cx("main-column__title")}>
-            <img
-              style={{ marginRight: "8px" }}
-              width={26}
-              height={54}
-              src={images.tit}
-              alt=""
-            />
-            <span
-              style={{
-                fontSize: "35px",
-                color: "var(--primary-color)",
-                fontWeight: "500",
-              }}
-            >
-              DU LỊCH
-            </span>
-          </div>
-          <div className={cx("main-column__main-news-tourism-container")}>
-            <div className={cx("main-news-tourism-container__first-news")}>
-              <div className={cx("first-news__img")}>
-                <img src={images.img01} alt="" />
-              </div>
-              <h2 className={cx("first-news__title")}>
-                Đến ngoại ô TP.HCM chiêm ngưỡng cánh đồng cỏ tranh đẹp như mơ
-              </h2>
-              <span className={cx("first-news-date")}>
-                <img src={images.clock} alt="" />
-                17/04/2024
-              </span>
-              <p className={cx("first-news__sub-title")}>
-                DLDN - Cánh đồng cỏ tranh trắng muốt mang vẻ đẹp thơ mộng, hoang
-                sơ tại làng đại học Thủ Đức trở thành điểm check-in lí tưởng của
-                nhiều bạn trẻ dịp cuối tuần.
-              </p>
-            </div>
-            <div className={cx("main-news-tourism-container__list-news-other")}>
-              {newsTourismListVertical.map((item, index) => {
+        <div className={cx("flex-column-4")}>
+          <div className={cx("vertical-list")}>
+            <div className={cx("title-list")}>bài viết mới nhất</div>
+            <ul className={cx("vertical-list")}>
+              {newsList03.map((item, index) => {
                 return (
-                  <div
-                    key={index}
-                    className={cx("list-news-other__news-other-item")}
-                  >
-                    <div className={cx("news-other-item__img")}>
-                      <img width={123} height={89} src={item.img} alt="" />
-                    </div>
-                    <div className={cx("news-other-item__content-news-other")}>
-                      <h2 className={cx("content-news-other__title")}>
-                        {item.title}
-                      </h2>
-                      <span className={cx("content-news-other__date")}>
-                        <img src={images.clock} alt="" />
-                        {item.date}
-                      </span>
-                    </div>
-                  </div>
+                  <li key={index} className={cx("item-list-03")}>
+                    <NewsBlock
+                      horizontalBlock
+                      data={item}
+                      widthPicture="94px"
+                      heightPicture="69px"
+                      styleTitle="1.6rem 500"
+                      styleTypeNews="color"
+                    />
+                  </li>
                 );
               })}
-            </div>
+            </ul>
           </div>
-          <div className={cx("main-column__line")}></div>
-          <div className={cx("main-column__title")}>
+        </div>
+      </div>
+      {/* Container point */}
+      <div
+        style={{
+          backgroundColor: "#f5f5f5",
+          paddingTop: "40px",
+          paddingBottom: "40px",
+        }}
+        className={cx("container")}
+      >
+        <div className={cx("flex-column-7", "margin-right-30")}>
+          <div className={cx("title-column")}>
+            <img src={images.tit} alt="" />
+            du lịch
+          </div>
+          <div
+            style={{ display: "flex", flexWrap: "nowrap" }}
+            className={cx("margin-top-30")}
+          >
+            <div className={cx("flex-column-4", "margin-right-10")}>
+              <NewsBlock
+                verticalBlock
+                data={{
+                  img: images.img01,
+                  title:
+                    "Đến ngoại ô TP.HCM chiêm ngưỡng cánh đồng cỏ tranh đẹp như mơ",
+                  date: "17/04/2024",
+                  subTitle:
+                    "DLDN - Cánh đồng cỏ tranh trắng muốt mang vẻ đẹp thơ mộng, hoang sơ tại làng đại học Thủ Đức trở thành điểm check-in lí tưởng của nhiều bạn trẻ dịp cuối tuần.",
+                }}
+                widthPicture="100%"
+                heightPicture="290px"
+                styleTitle="2.5rem 500 3"
+              />
+            </div>
+            <ul className={cx("flex-column-3")}>
+              {newsList04.map((item, index) => {
+                return (
+                  <li
+                    key={index}
+                    style={{ flex: "1" }}
+                    className={cx("news-list-04")}
+                  >
+                    <NewsBlock
+                      horizontalBlock
+                      data={item}
+                      widthPicture="123px"
+                      heightPicture="89px"
+                      styleTitle="1.5rem 600 3"
+                    />
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <div
+            style={{
+              paddingTop: "50px",
+              paddingBottom: "30px",
+              borderTop: "1px solid #e3e3e3",
+              marginTop: "30px",
+            }}
+            className={cx("title-column")}
+          >
+            <img src={images.tit} alt="" />
+            văn hóa - giải trí
+          </div>
+          <NewsBlock
+            verticalBlock
+            data={{
+              img: images.img12,
+              title:
+                "Thanh Thúy 1m93 sẽ thi đấu ở giải bóng chuyền đẳng cấp hàng đầu thế giới",
+              date: "11/04/2024",
+              subTitle:
+                "DLDN - Lãnh đạo của đội bóng chuyền VTV Bình Điền Long An đã hé lộ quốc gia tiếp theo mà chủ công Trần Thị Thanh Thúy sẽ xuất ngoại thi đấu.",
+            }}
+            widthPicture="100%"
+            heightPicture="440px"
+            styleTitle="2.5rem 600"
+          />
+          <ul className={cx("horizontal-list", "margin-top-30")}>
+            {newsList05.map((item, index) => {
+              return (
+                <li key={index} className={cx("item-list-05")}>
+                  <NewsBlock
+                    data={item}
+                    verticalBlock
+                    widthPicture="100%"
+                    heightPicture="165px"
+                    styleTitle="1.5rem 600"
+                  />
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className={cx("flex-column-3")}>
+          <div
+            style={{ padding: "10px", backgroundColor: "var(--white-color)" }}
+            className={cx("vertical-list")}
+          >
+            <div className={cx("title-list")}>tin đọc nhiều</div>
             <img
-              style={{ marginRight: "8px" }}
-              width={26}
-              height={54}
-              src={images.tit}
+              style={{ marginTop: "4px", marginBottom: "20px" }}
+              height={4}
+              width={59}
+              src={images.titSide}
               alt=""
             />
-            <span
-              style={{
-                fontSize: "35px",
-                color: "var(--primary-color)",
-                fontWeight: "500",
-              }}
-            >
-              VĂN HÓA - GIẢI TRÍ
-            </span>
-          </div>
-          <div
-            className={cx(
-              "main-column__main-news-culture-entertainment-container"
-            )}
-          >
-            <div className={cx("main-news-culture-entermainment__img")}>
-              <img src={images.img12} alt="" />
-            </div>
-            <h2 className={cx("main-news-culture-entertainment__title")}>
-              Thanh Thúy 1m93 sẽ thi đấu ở giải bóng chuyền đẳng cấp hàng đầu
-              thế giới
-            </h2>
-            <span className={cx("main-news-culture-entertainment__date")}>
-              <img src={images.clock} alt="" />
-              11/04/2024
-            </span>
-            <p className={cx("main-news-culture-entertainment__sub-title")}>
-              DLDN - Lãnh đạo của đội bóng chuyền VTV Bình Điền Long An đã hé lộ
-              quốc gia tiếp theo mà chủ công Trần Thị Thanh Thúy sẽ xuất ngoại
-              thi đấu.
-            </p>
-          </div>
-          <div
-            className={cx("main-column__list-news-culture-entertainment-other")}
-          >
-            {newsCultureEntertainmentListOther.map((item, index) => {
-              return (
-                <div
-                  key={index}
-                  className={cx(
-                    "list-news-culture-entertainment-other__news-item-culture-entertainment-other"
-                  )}
-                >
-                  <div
-                    className={cx("news-item-culture-entertainment-other__img")}
-                  >
-                    <img src={item.img} alt="" />
-                  </div>
-                  <h2
-                    className={cx(
-                      "news-item-culture-entertainment-other__title"
-                    )}
-                  >
-                    {item.title}
-                  </h2>
-                  <span
-                    className={cx(
-                      "news-item-culture-entertainment-other__date"
-                    )}
-                  >
-                    <img src={images.clock} alt="" />
-                    {item.date}
-                  </span>
-                </div>
-              );
-            })}
+            <ul className={cx("vertical-list")}>
+              {newsList06.map((item, index) => {
+                return (
+                  <li key={index} className={cx("item-list-06")}>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "20px",
+                        left: "0",
+                        fontSize: "5rem",
+                        color: "#d2d2d2",
+                        lineHeight: "5rem",
+                      }}
+                    >
+                      {index + 1}
+                    </div>
+                    <NewsBlock
+                      horizontalBlock
+                      data={item}
+                      styleTitle="1.6rem 500 3"
+                      styleTypeNews="color box"
+                    />
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
-        <div style={{ flex: 2 }} className={cx("sub-column")}>
-          <div className={cx("sub-column__list-hot-news-vertical")}>
-            <div className={cx("list-hot-news-vertical__title")}>
-              TIN ĐỌC NHIỀU
-              <img src={images.titSide} alt="" />
-            </div>
-            {hotNewsList.map((item, index) => {
-              return (
-                <div
-                  key={index}
-                  className={cx("list-hot-news-vertical__hot-news-item")}
-                >
-                  <div className={cx("hot-news-item__number")}>{index + 1}</div>
-                  <div className={cx("hot-news-item__content-hot-news-item")}>
-                    <h2 className={cx("content-hot-news-item__title")}>
-                      {item.title}
-                    </h2>
-                    <span className={cx("content-hot-news-item__type")}>
-                      {item.type}
-                    </span>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </Block>
-      <Block
-        styleBlock={{
-          padding: "60px 24px 45px",
+      </div>
+      {/* Container point */}
+      <div
+        style={{
           backgroundColor: "var(--primary-color)",
-          display: "flex",
-          flexDirection: "column",
+          padding: "50px 25px 40px",
         }}
+        className={cx("container", "vertical-list")}
       >
-        <div className={cx("news-business-title")}>
+        <div
+          style={{ color: "var(--white-color)" }}
+          className={cx("title-column")}
+        >
           <img src={images.titW} alt="" />
-          DOANH NHÂN
+          doanh nhân
         </div>
-        <div className={cx("news-business-list")}>
-          {newsBusinessList.map((item, index) => {
+        <ul className={cx("horizontal-list")}>
+          {newsList07.map((item, index) => {
             return (
-              <div
-                key={index}
-                className={cx("news-business-list__news-business-item")}
-              >
-                <div className={cx("news-business-item__img")}>
-                  <img src={item.img} alt="" />
-                </div>
-                <h2 className={cx("news-business-item__title")}>
-                  {item.title}
-                </h2>
-                <span className={cx("news-business-item__date")}>
-                  <img src={images.clock} alt="" />
-                  17/04/2024
-                </span>
-                <p className={cx("news-business-item__sub-title")}>
-                  {item.subTitle}
-                </p>
-              </div>
+              <li key={index} className={cx("item-list-07", "margin-top-20")}>
+                <NewsBlock
+                  verticalBlock
+                  data={item}
+                  widthPicture="100%"
+                  heightPicture="280px"
+                  whiteLetters
+                  styleTitle="2rem 600"
+                />
+              </li>
             );
           })}
-        </div>
-      </Block>
-      <Block
-        styleBlock={{
-          padding: "45px 60px",
-          backgroundColor: "#f5f5f5",
-          display: "flex",
-          flexDirection: "column",
-        }}
+        </ul>
+      </div>
+      {/* Container point */}
+      <div
+        style={{ backgroundColor: "#f5f5f5", paddingBottom: "40px" }}
+        className={cx("container", "vertical-list")}
       >
-        {newsRealEstate_FashionList.map((item, index) => {
-          return (
-            <div key={index} className={cx("group")}>
-              <div className={cx("main-column__title")}>
-                <img
-                  style={{ marginRight: "8px" }}
-                  width={26}
-                  height={54}
-                  src={images.tit}
-                  alt=""
-                />
-                <span
-                  style={{
-                    fontSize: "35px",
-                    color: "var(--primary-color)",
-                    fontWeight: "500",
-                  }}
-                >
-                  {item.title}
-                </span>
-              </div>
-              <div className={cx("group__main-news-container")}>
-                <div className={cx("main-news-container__main-column")}>
-                  <div className={cx("main-column__img")}>
-                    <img src={item.mainNews.img} alt="" />
-                  </div>
-                  <div className={cx("main-column__main-content")}>
-                    <h2 className={cx("main-content__title")}>
-                      {item.mainNews.title}
-                    </h2>
-                    <span className={cx("main-content__date")}>
-                      <img src={images.clock} alt="" />
-                      {item.mainNews.date}
-                    </span>
-                    <p className={cx("main-content__subtitle")}>
-                      {item.mainNews.subTitle}
-                    </p>
-                  </div>
-                </div>
-                <div className={cx("main-news-container__sub-column")}>
-                  {item.newsOther.map((i, idx) => {
-                    return (
-                      <div key={idx} className={cx("sub-column__news-item")}>
-                        <div className={cx("news-item__img")}>
-                          <img src={i.img} alt="" />
-                        </div>
-                        <div className={cx("news-item__content-news-item")}>
-                          <h2 className={cx("content-news-item__title")}>
-                            {i.title}
-                          </h2>
-                          <span className={cx("content-news-item__date")}>
-                            <img src={images.clock} alt="" />
-                            {i.date}
-                          </span>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </Block>
-      <Block styleBlock={{ display: "flex", flexDirection: "column" }}>
-        <div className={cx("main-column__title")}>
-          <img
-            style={{ marginRight: "8px" }}
-            width={26}
-            height={54}
-            src={images.tit}
-            alt=""
-          />
-          <span
+        <div className={cx("title-column")}>
+          <img src={images.tit} alt="" />
+          bất động sản
+        </div>
+        <div className={cx("horizontal-list", "margin-top-20")}>
+          <div
             style={{
-              fontSize: "35px",
-              color: "var(--primary-color)",
-              fontWeight: "500",
+              backgroundColor: "#ededed",
+              overflow: "hidden",
+              borderTopLeftRadius: "4px",
+              borderBottomLeftRadius: "4px",
+              paddingRight: "10px",
             }}
+            className={cx("flex-column-2", "margin-right-30")}
           >
-            LÀM ĐẸP
-          </span>
-        </div>
-        <div className={cx("main-column__news-beautify-container")}>
-          <div className={cx("news-beautify-container__main-column")}>
-            {newsBeautifyMainColumn.map((item, index) => {
-              return (
-                <div
-                  key={index}
-                  className={cx("main-column__news-beautify-item")}
-                >
-                  <div className={cx("news-beautify-item__img")}>
-                    <img src={item.img} alt="" />
-                  </div>
-                  <div
-                    className={cx(
-                      "news-beautify-item__content-news-beautify-item"
-                    )}
-                  >
-                    <h2 className={cx("content-news-beautify-item__title")}>
-                      {item.title}
-                    </h2>
-                    <span className={cx("content-news-beautify-item__date")}>
-                      <img src={images.clock} alt="" />
-                      {item.date}
-                    </span>
-                    <p className={cx("content-news-beautify-item__subTitle")}>
-                      {item.subTitle}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
+            <NewsBlock
+              horizontalBlock
+              data={{
+                img: images.img02,
+                title: "Giá chung cư mới TP HCM ngược chiều Hà Nội",
+                date: "17/04/2024",
+                subTitle:
+                  "DLDN - Tới hết quý I, giá căn hộ mới ở TP HCM giảm 3%, bình quân 61 triệu đồng mỗi m2, trái ngược với đà tăng 19% của chung cư Hà Nội.",
+              }}
+              widthPicture="440px"
+              heightPicture="444px"
+              styleTitle="2.2rem 600 2"
+              marginTopTitle="40px"
+              lineClampSubTitle="10"
+            />
           </div>
-          <div className={cx("news-beautify-container__sub-column")}>
-            {newsBeautifySubColumn.map((item, index) => {
-              return (
-                <div
-                  key={index}
-                  className={cx("sub-column__news-beautify-item-sub")}
-                >
-                  <div className={cx("news-beautify-item-sub__img")}>
-                    <img src={item.img} alt="" />
-                  </div>
-                  <div
-                    className={cx(
-                      "news-beautify-item-sub__content-news-beautify-item-sub"
-                    )}
-                  >
-                    <h2 className={cx("content-news-beautify-item-sub__title")}>
-                      {item.title}
-                    </h2>
-                    <span
-                      className={cx("content-news-beautify-item-sub__date")}
-                    >
-                      <img src={images.clock} alt="" />
-                      {item.date}
-                    </span>
-                  </div>
-                </div>
-              );
-            })}
+          <div className={cx("flex-column-1")}>
+            <ul className={cx("vertical-list")}>
+              {newsList08.map((item, index) => {
+                return (
+                  <li key={index} className={cx("item-list-08")}>
+                    <NewsBlock
+                      horizontalBlock
+                      data={item}
+                      widthPicture="127px"
+                      heightPicture="96px"
+                      styleTitle="1.6rem 500"
+                    />
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
-      </Block>
+      </div>
+      {/* Container point */}
+      <div
+        style={{
+          backgroundColor: "#f5f5f5",
+          paddingTop: "40px",
+          paddingBottom: "60px",
+          borderTop: "1px solid #e3e3e3",
+        }}
+        className={cx("container", "vertical-list")}
+      >
+        <div className={cx("title-column")}>
+          <img src={images.tit} alt="" />
+          thời trang
+        </div>
+        <div className={cx("horizontal-list", "margin-top-20")}>
+          <div
+            style={{
+              backgroundColor: "var(--white-color)",
+              overflow: "hidden",
+              borderTopLeftRadius: "4px",
+              borderBottomLeftRadius: "4px",
+              paddingRight: "10px",
+            }}
+            className={cx("flex-column-2", "margin-right-30")}
+          >
+            <NewsBlock
+              horizontalBlock
+              data={{
+                img: images.img09,
+                title:
+                  "Trước khi lấy chồng doanh nhân, Midu là “đại gia bất động sản” chăm mặc gợi cảm",
+                date: "17/04/2024",
+                subTitle:
+                  "DLDN - Thông tin nữ diễn viên sắp lên xe hoa gây chú ý.",
+              }}
+              widthPicture="440px"
+              heightPicture="444px"
+              styleTitle="2.2rem 600 2"
+              marginTopTitle="40px"
+              lineClampSubTitle="10"
+            />
+          </div>
+          <div className={cx("flex-column-1")}>
+            <ul className={cx("vertical-list")}>
+              {newsList09.map((item, index) => {
+                return (
+                  <li key={index} className={cx("item-list-08")}>
+                    <NewsBlock
+                      horizontalBlock
+                      data={item}
+                      widthPicture="127px"
+                      heightPicture="96px"
+                      styleTitle="1.6rem 500"
+                    />
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {/* Container point */}
+      <div
+        style={{
+          padding: "60px",
+        }}
+        className={cx("container", "vertical-list")}
+      >
+        <div className={cx("title-column")}>
+          <img src={images.tit} alt="" />
+          làm đẹp
+        </div>
+        <div style={{ marginTop: "20px" }} className={cx("horizontal-list")}>
+          <div style={{ marginRight: "20px" }} className={cx("flex-column-2")}>
+            <NewsBlock
+              data={{
+                img: images.img25,
+                title: "Cách làm gà lắc giòn rụm dễ đến không ngờ",
+                date: "21/03/2024",
+                subTitle:
+                  "DLDN - Ức gà bị nhiều người chê vì khó chế biến, dễ bị khô. Nhưng đây là phần thịt rất bổ dưỡng và nếu biết cách sẽ làm được rất nhiều món ngon hấp dẫn.",
+              }}
+              verticalBlock
+              styleTitle="2.2rem 600"
+              widthPicture="100%"
+              heightPicture="340px"
+            />
+          </div>
+          <div style={{ marginRight: "20px" }} className={cx("flex-column-2")}>
+            <NewsBlock
+              data={{
+                img: images.img26,
+                title:
+                  "Thêm một cách chế biến tôm tuyệt ngon, cực kỳ hao cơm, người vụng mấy cũng làm được",
+                date: "15/03/2024",
+                subTitle:
+                  "DLDN - Tôm siêu nhiều canxi, cực tốt cho sức khỏe. Chế biến theo cách này đã bổ lại càng thơm ngon, tốn cơm.",
+              }}
+              verticalBlock
+              styleTitle="2.2rem 600"
+              widthPicture="100%"
+              heightPicture="340px"
+            />
+          </div>
+          <ul className={cx("flex-column-1", "vertical-list")}>
+            {newsList10.map((item, index) => {
+              return (
+                <li key={index} className={cx("item-list-10")}>
+                  <NewsBlock
+                    data={item}
+                    verticalBlock
+                    widthPicture="100%"
+                    heightPicture="188px"
+                    styleTitle="1.6rem 500"
+                  />
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }

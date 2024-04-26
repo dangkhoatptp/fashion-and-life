@@ -6,7 +6,7 @@ const cx = classNames.bind(styles);
 function Date({ large = false, day = 1, month = 1, year = 1999 }) {
   const getMonthYear = () => {
     if (month < 10) {
-      return `TH0${month} ${year}`;
+      return `TH${month} ${year}`;
     }
     return `TH${month} ${year}`;
   };
